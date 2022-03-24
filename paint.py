@@ -56,12 +56,12 @@ def rectangle(start, end):
     for count in range(4):
         # drawing length
         if count% 2 == 0:
-            forward(end.x - start.x) # Forward turtle by l units
+            forward(end.x - start.x) # Forward turtle
             left(90) # Turn turtle by 90 degree
         
         # drawing width
         else:
-            forward(end.x - start.x) # Forward turtle by w units
+            forward(end.x - start.x + 5) # Forward turtle by
             left(90) # Turn turtle by 90 degree
 
     end_fill()
@@ -108,6 +108,7 @@ onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color('magenta'), 'M')
+onkey(lambda: color('orange'), 'O')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
