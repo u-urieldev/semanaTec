@@ -24,7 +24,7 @@ def change(x, y):
 
 def inside(head):
     "Return True if head inside boundaries."
-    return -200 < head.x < 190 and -200 < head.y < 190
+    return -210 < head.x < 200 and -210 < head.y < 200
 
 def move():
     "Move snake forward one segment."
@@ -48,11 +48,12 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, 'magenta') #Cambia el color de la snake
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 200)
+    ontimer(move, 150) #Se cambia la velocidad de la sepiente con el segundo parametro
+
 
 setup(420, 420, 370, 0)
 hideturtle()
