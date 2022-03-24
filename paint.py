@@ -51,11 +51,12 @@ def triangle(start, end):
     up()
     goto(start.x, start.y)
     down()
+    begin_fill()
     for count in range(3):
         forward(end.x - start.x)
         left(120)
 
-    begin_fill()
+    end_fill()
 
 
 def tap(x, y):
