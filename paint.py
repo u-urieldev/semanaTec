@@ -10,9 +10,9 @@ Exercises
 """
 
 from turtle import *
-
+import turtle
 from freegames import vector
-
+from math import hypot
 
 def line(start, end):
     """Draw line from start to end."""
@@ -38,7 +38,13 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    turtle.circle(hypot(end.x - start.x, end.y - start.y))
+    end_fill()
 
 
 def rectangle(start, end):
@@ -79,6 +85,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('magenta'), 'M')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
