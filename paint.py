@@ -10,7 +10,6 @@ Exercises
 """
 
 from turtle import *
-import turtle
 from freegames import vector
 from math import hypot
 
@@ -49,12 +48,35 @@ def circle(start, end):
 
 def rectangle(start, end):
     """Draw rectangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
+    for count in range(4):
+        # drawing length
+        if count% 2 == 0:
+            forward(end.x - start.x) # Forward turtle by l units
+            left(90) # Turn turtle by 90 degree
+        
+        # drawing width
+        else:
+            forward(end.x - start.x) # Forward turtle by w units
+            left(90) # Turn turtle by 90 degree
+
+    end_fill()
 
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+
+    end_fill()
 
 
 def tap(x, y):
