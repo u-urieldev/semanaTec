@@ -1,11 +1,10 @@
-"""Cannon, hitting targets with projectiles.
+"""
+Projectile Game
 
-Exercises
+Uriel Aguilar
+Luca Boschetti
+Alejandro Arouesty
 
-1. Keep score by counting target hits.
-2. Vary the effect of gravity.
-3. Apply gravity to the targets.
-4. Change the speed of the ball. #done
 """
 
 from random import randrange
